@@ -1,0 +1,271 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>UrduHuhh</title>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #0c0c11;
+  color: #ffffff;
+  font-family: Arial, sans-serif;
+}
+
+header {
+  padding: 18px;
+  background: #16161e;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.logo {
+  color: #b56aff;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 12px;
+  font-size: 14px;
+}
+
+.hero {
+  padding: 45px 20px;
+  background: linear-gradient(135deg, #38105e, #101018);
+}
+
+.hero h1 {
+  font-size: 34px;
+  margin-bottom: 12px;
+}
+
+.hero p {
+  color: #ccccd5;
+  margin-bottom: 22px;
+}
+
+.search {
+  width: 100%;
+  max-width: 450px;
+  padding: 14px;
+  border: 1px solid #333340;
+  border-radius: 9px;
+  background: #22222c;
+  color: white;
+  outline: none;
+}
+
+.section {
+  padding: 25px 16px;
+}
+
+.section h2 {
+  margin-bottom: 20px;
+  border-left: 4px solid #a855f7;
+  padding-left: 10px;
+}
+
+.anime-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+
+.anime-card {
+  background: #1a1a23;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid #272731;
+}
+
+.poster {
+  height: 190px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 10px;
+  font-size: 22px;
+  font-weight: bold;
+  background: linear-gradient(145deg, #6927b8, #17172c);
+}
+
+.poster.two {
+  background: linear-gradient(145deg, #be123c, #25111c);
+}
+
+.poster.three {
+  background: linear-gradient(145deg, #087f8c, #111e2d);
+}
+
+.poster.four {
+  background: linear-gradient(145deg, #b77912, #291d15);
+}
+
+.info {
+  padding: 12px;
+}
+
+.info h3 {
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.info p {
+  font-size: 13px;
+  color: #aaaab5;
+  margin-bottom: 12px;
+}
+
+.watch {
+  display: block;
+  text-align: center;
+  background: #8b35d6;
+  color: white;
+  padding: 10px;
+  border-radius: 7px;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.watch:active {
+  background: #7024b5;
+}
+
+footer {
+  text-align: center;
+  padding: 28px 15px;
+  color: #888;
+  background: #15151d;
+  margin-top: 25px;
+}
+
+footer h3 {
+  color: #b56aff;
+  margin-bottom: 10px;
+}
+
+@media (min-width: 700px) {
+  .anime-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .poster {
+    height: 260px;
+  }
+
+  .hero {
+    padding: 70px 40px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">UrduHuhh</div>
+
+  <nav>
+    <a href="#">Home</a>
+    <a href="#anime">Anime</a>
+    <a href="#about">About</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h1>Anime, Ab Urdu Mein!</h1>
+  <p>Apne favourite anime ko Urdu mein explore karo.</p>
+
+  <input
+    class="search"
+    id="search"
+    type="text"
+    placeholder="Anime search karo..."
+    oninput="searchAnime()"
+  >
+</section>
+
+<section class="section" id="anime">
+  <h2>Latest Anime</h2>
+
+  <div class="anime-grid" id="animeGrid">
+
+    <div class="anime-card">
+      <div class="poster">ANIME 01</div>
+      <div class="info">
+        <h3>Anime Title One</h3>
+        <p>Urdu Dub • Season 1</p>
+        <a class="watch" href="#" onclick="demo(event)">Episodes</a>
+      </div>
+    </div>
+
+    <div class="anime-card">
+      <div class="poster two">ANIME 02</div>
+      <div class="info">
+        <h3>Anime Title Two</h3>
+        <p>Urdu Dub • Season 1</p>
+        <a class="watch" href="#" onclick="demo(event)">Episodes</a>
+      </div>
+    </div>
+
+    <div class="anime-card">
+      <div class="poster three">ANIME 03</div>
+      <div class="info">
+        <h3>Anime Title Three</h3>
+        <p>Urdu Dub • Ongoing</p>
+        <a class="watch" href="#" onclick="demo(event)">Episodes</a>
+      </div>
+    </div>
+
+    <div class="anime-card">
+      <div class="poster four">ANIME 04</div>
+      <div class="info">
+        <h3>Anime Title Four</h3>
+        <p>Urdu Dub • Movie</p>
+        <a class="watch" href="#" onclick="demo(event)">Watch</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<footer id="about">
+  <h3>UrduHuhh</h3>
+  <p>Urdu dubbing made with passion.</p>
+  <p>© 2026 UrduHuhh</p>
+</footer>
+
+<script>
+function searchAnime() {
+  let input = document.getElementById("search").value.toLowerCase();
+  let cards = document.querySelectorAll(".anime-card");
+
+  cards.forEach(card => {
+    let title = card.querySelector("h3").innerText.toLowerCase();
+    card.style.display = title.includes(input) ? "" : "none";
+  });
+}
+
+function demo(event) {
+  event.preventDefault();
+  alert("Episodes coming soon to UrduHuhh!");
+}
+</script>
+
+</body>
+</html>
